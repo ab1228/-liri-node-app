@@ -36,10 +36,20 @@ function songs(songFromFile) {
             return console.log('Error occurred: ' + err);
         }
         //artist name, song name, spotify href,  album name//
-        console.log('Artist Name:  ' + data.tracks.items[0].artists[0].name);
-        console.log('Song Name:  ' + data.tracks.items[0].name);
-        console.log('Spotify URL: ' + data.tracks.items[0].external_urls.spotify);
-        console.log('Album Name: ' + data.tracks.items[0].album.name)
+        var data = data;
+        var aboutThisSong =
+            '\nArtist Name:  ' + data.tracks.items[0].artists[0].name + '\nSong Name:  ' + data.tracks.items[0].name + '\nSpotify URL: ' + data.tracks.items[0].external_urls.spotify +
+            '\nAlbum Name: ' + data.tracks.items[0].album.name;
+
+        fs.appendFile('log.txt', '\n' + aboutThisSong + '\n', function (err) {
+            if (err) {
+                return console.log(err);
+            }
+            else {
+                console.log("Content Added!");
+            }
+
+        });
     });
 
 }
