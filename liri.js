@@ -57,16 +57,27 @@ function movies() {
     axios.get('https://www.omdbapi.com/?t=' + input + '&y=&plot=short&apikey=trilogy')
         .then(function (response) {
             // handle success
-            console.log('------------------------------------------------')
-            console.log('Title of the movie is: ' + response.data.Title);
-            console.log('The year the movie came out: ' + response.data.Year);
-            console.log('The IMDB rating: ' + response.data.imdbRating);
-            console.log('Rotten Tomatoes rating: ' + response.data.Ratings.Value);
-            console.log('Country where the movie was produced: ' + response.data.Country);
-            console.log('Langauge of the movie ' + response.data.Language);
-            console.log('Plot of the movie ' + response.data.Plot);
-            console.log('Actors: ' + response.data.Actors);
-            console.log('------------------------------------------------')
+            var aboutThisMovie =
+
+                '\nTitle of the movie is: ' + response.data.Title +
+                '\nThe year the movie came out: ' + response.data.Year +
+                '\nThe IMDB rating: ' + response.data.imdbRating +
+                '\nRotten Tomatoes rating: ' + response.data.Ratings.Value +
+                '\nCountry where the movie was produced: ' + response.data.Country +
+                '\nLangauge of the movie ' + response.data.Language +
+                '\nPlot of the movie ' + response.data.Plot +
+                '\nActors: ' + response.data.Actors
+
+            fs.appendFile('log.txt', '\n' + aboutThisMovie + '\n', function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                else {
+                    console.log("Content Added!");
+                }
+
+            });
+
 
         })
         .catch(function (error) {

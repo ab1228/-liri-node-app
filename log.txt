@@ -4,3 +4,14 @@ Artist Name:  Kings of Leon
 Song Name:  Use Somebody
 Spotify URL: https://open.spotify.com/track/5VGlqQANWDKJFl0MBG3sg2
 Album Name: Only By The Night
+
+
+
+Title of the movie is: The Matrix
+The year the movie came out: 1999
+The IMDB rating: 8.7
+Rotten Tomatoes rating: undefined
+Country where the movie was produced: USA
+Langauge of the movie English
+Plot of the movie A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
