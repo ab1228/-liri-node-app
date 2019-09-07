@@ -23,6 +23,7 @@
     "keys.js": "^1.0.2",
     "moment": "^2.24.0",
     "node-spotify-api": "^1.1.1",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "uglify-js": "^3.6.0"
   }
 }
